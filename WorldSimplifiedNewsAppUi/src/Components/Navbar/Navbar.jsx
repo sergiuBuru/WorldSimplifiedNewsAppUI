@@ -16,7 +16,7 @@ function Navbar () {
     }
 
     return (
-      <div className={"flex flex-row justify-end space-x-5 md:space-x-16 w-10/12 fixed top-14 h-16 bg-transparent mx-6  md:mx-16 text-xl font-playfair hover:cursor-pointer"}>
+      <div className={"flex flex-row justify-end space-x-5 md:space-x-16 w-10/12 fixed top-14 h-16 bg-transparent mx-6 md:mx-16 text-xl font-playfair hover:cursor-pointer"}>
         <div className="basis-3/5" >
             <Link
                 activeClass="active"
