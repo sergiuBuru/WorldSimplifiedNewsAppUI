@@ -6,10 +6,12 @@ function Contact() {
   const handleScroll = (e) => {
     // setintoview seems to be bugged on chrome. settimer makes it work
     const timer = setTimeout(() => {
-      var about_section = document.getElementById('about-section');
-
+      // if the user scrolls down then scroll into view the contact section, otherwise scroll into view the home section
+      // remove the underline from the about navbar link and place it under the link that corresponds to the section that was scrolled into view
       if (e.nativeEvent.wheelDelta > 0) {
-        about_section.scrollIntoView({behavior: 'smooth'});
+        document.getElementById('Contact-link').classList.remove('underline');
+        document.getElementById('About-link').classList.add('underline', 'underline-offset-4');
+        document.getElementById('about-section').scrollIntoView({behavior: 'smooth'});
       }  
     }, 600);
     
