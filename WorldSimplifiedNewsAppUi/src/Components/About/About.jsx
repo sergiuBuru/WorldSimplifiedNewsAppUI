@@ -10,8 +10,8 @@ function About() {
       // remove the underline from the about navbar link and place it under the link that corresponds to the section that was scrolled into view
       document.getElementById('About-link').classList.remove('underline');
       if (e.nativeEvent.wheelDelta <= 0) {
-        document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'});
-        document.getElementById('Contact-link').classList.add('underline', 'underline-offset-4');
+        document.getElementById('signup-section').scrollIntoView({behavior: 'smooth'});
+        document.getElementById('Sign up-link').classList.add('underline', 'underline-offset-4');
       } else {
         document.getElementById('home-section').scrollIntoView({behavior: 'smooth'});
         document.getElementById('Home-link').classList.add('underline', 'underline-offset-4');

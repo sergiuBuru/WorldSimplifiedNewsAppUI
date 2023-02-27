@@ -1,7 +1,9 @@
-.bg_hero{
-    background-image: url(https://res.cloudinary.com/doio2uvsw/image/upload/v1676951167/world_simplified_static_photos/ws-hero-photo_ymgr26.jpg);
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
+
+.bg_wallpaper { 
+    background: url(https://res.cloudinary.com/doio2uvsw/image/upload/v1677180646/world_simplified_static_photos/news_wallpaper_nznkmr.png) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-}
+    /* filter: blur(6px); */
+  }

@@ -2,7 +2,7 @@ import './App.css'
 import Navbar from '../Navbar/Navbar'
 import Home from '../Home/Home'
 import About from '../About/About'
-import Contact from '../Contact/Contact'
+import Signup from '../Signup/Signup';
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Contact />
+      <Signup />
     </div>
   )
 }

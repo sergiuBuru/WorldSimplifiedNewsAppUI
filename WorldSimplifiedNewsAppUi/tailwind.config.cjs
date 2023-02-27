@@ -11,7 +11,9 @@ module.exports = {
       }
     },
     fontFamily: {
-      playfair: ['Playfair Display', 'serif']
+      playfair: ['Playfair Display', 'serif'],
+      nanum: ['Nanum Myeongjo', 'serif'],
+      rubik: ['Rubik', 'sans-serif']
     }
   },
   plugins: [],
