@@ -58,7 +58,7 @@ function About() {
         </motion.div>
         <motion.div className="md:basis-10/12 basis-10/12 grid grid-cols-2 md:items-start items-end z-50">
           {cardData.info.map((card) => (
-            <FeaturesCard title={card.title} body={card.body} bgClass={card.bgClass} animationX={card.animationX} key={uuid()}/>
+            <FeaturesCard title={card.title} body={card.body} bgClass={card.bgClass} animationX={card.animationX} key={uuid()} />
           ))}
           {/* <FeaturesCard title={cardData.info[0].title} body={cardData.info[0].body} bgClass={cardData.info[0].bgClass} animationX={cardData.info[0].animationX} key={uuid()}/>
           <FeaturesCard title={cardData.info[1].title} body={cardData.info[1].body} bgClass={cardData.info[1].bgClass} animationX={cardData.info[1].animationX} key={uuid()}/>
