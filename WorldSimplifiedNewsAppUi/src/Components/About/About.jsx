@@ -48,7 +48,7 @@ function About() {
   }, [resized]);
 
   return (
-    <div ref={containerRef} id="about-section" className={' z-10 h-full w-full flex bg-gradient-to-t from-slate-600 ' + containerClass} onWheel={handleScroll}>
+    <div ref={containerRef} id="about-section" className={' z-10 h-full w-full flex ' + containerClass} onWheel={handleScroll}>
       <div className="md:pt-32 md:px-20 pt-16 px-12 sm:basis-8/12 basis-9/12 flex flex-col">
         <motion.div ref={textRef} initial={{opacity: 0}} animate={textIsInView ? {opacity: 1} : {opacity: 0}} transition={{ease: "easeIn", duration: 2}}
           className='md:basis-2/12 basis-2/12' 
