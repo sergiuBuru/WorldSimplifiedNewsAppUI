@@ -19,6 +19,8 @@ module.exports = {
       playfair: ['Playfair Display', 'serif'],
       nanum: ['Nanum Myeongjo', 'serif'],
       rubik: ['Rubik', 'sans-serif'],
+      anton: ['Anton', 'sans-serif'],
+      gloock: ['Gloock', 'sans-serif']
     }
   },
   plugins: [],

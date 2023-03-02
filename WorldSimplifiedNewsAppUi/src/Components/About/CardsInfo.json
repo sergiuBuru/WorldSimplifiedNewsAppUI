@@ -21,7 +21,7 @@
     {
         "title": "Compare And Contrast",
         "body": "Explore different perspectives on the same story with our multi-source news feature. See how different news outlets are covering the same event, so you can gain a complete view",
-        "bgClass": "bg-gradient-to-r from-black to-neutral-500",
+        "bgClass": "bg-gradient-to-b from-black to-neutral-500",
         "animationX": 30
     }]
 }
