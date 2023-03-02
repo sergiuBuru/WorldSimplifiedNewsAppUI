@@ -10,7 +10,8 @@ module.exports = {
         'hero' : "url('https://res.cloudinary.com/doio2uvsw/image/upload/v1676951167/world_simplified_static_photos/ws-hero-photo_ymgr26.jpg')"
       },
       height: {
-        '95/100' : '95%'
+        '95/100' : '95%',
+        '9/10': '90%'
       }, screens: {
         'mdy': { 'raw': '(min-height: 700px)'}
       }

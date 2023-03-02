@@ -48,7 +48,7 @@ function About() {
   }, [resized]);
 
   return (
-    <div ref={containerRef} id="about-section" className={' z-10 h-full w-full flex bg-gradient-to-t from-slate-600 ' + containerClass} onWheel={handleScroll}>
+    <div ref={containerRef} id="about-section" className={'relative z-0 h-full w-full flex bg-gradient-to-t from-slate-600 ' + containerClass} onWheel={handleScroll}>
       <div className="md:pt-32 md:px-20 pt-16 px-12 sm:basis-8/12 basis-9/12 flex flex-col">
         <motion.div ref={textRef} initial={{opacity: 0}} animate={textIsInView ? {opacity: 1} : {opacity: 0}} transition={{ease: "easeIn", duration: 2}}
           className='md:basis-2/12 basis-2/12' 
@@ -56,10 +56,14 @@ function About() {
           <p className="md:text-4xl sm:text-3xl text-2xl font-playfair font-semibold pt-4">Know the pulse of the world</p>
           <p className="md:text-lg sm:text-lg mt-2 font-rubik">With the following features you'll be able to catch up with the major world events for the day in no more than 30 minutes.</p>
         </motion.div>
-        <motion.div className="md:basis-10/12 basis-10/12 grid grid-cols-2 md:items-start items-end">
-          {cardData.info.map((card) => (
+        <motion.div className="md:basis-10/12 basis-10/12 grid grid-cols-2 md:items-start items-end z-50">
+          {/* {cardData.info.map((card) => (
             <FeaturesCard title={card.title} body={card.body} bgClass={card.bgClass} animationX={card.animationX} key={uuid()}/>
-          ))}
+          ))} */}
+          <FeaturesCard title={cardData.info[0].title} body={cardData.info[0].body} bgClass={cardData.info[0].bgClass} animationX={cardData.info[0].animationX} key={uuid()}/>
+          <FeaturesCard title={cardData.info[1].title} body={cardData.info[1].body} bgClass={cardData.info[1].bgClass} animationX={cardData.info[1].animationX} key={uuid()}/>
+          <FeaturesCard title={cardData.info[2].title} body={cardData.info[2].body} bgClass={cardData.info[2].bgClass} animationX={cardData.info[2].animationX} key={uuid()}/>
+          <FeaturesCard title={cardData.info[3].title} body={cardData.info[3].body} bgClass={cardData.info[3].bgClass} animationX={cardData.info[3].animationX} key={uuid()}/>
         </motion.div>
       </div>
       <motion.div className={"sm:basis-4/12 basis-3/12 overflow-hidden"} >
