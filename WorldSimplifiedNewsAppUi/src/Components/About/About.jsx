@@ -12,6 +12,8 @@ function About() {
   const textIsInView = useInView(textRef);
   const [containerClass, setClass] = useState('');
   const [resized, setResized] = useState(0);
+  const cardRef = useRef(null);
+  const cardInView = useInView(cardRef);
 
   const handleScroll = (e) => {
     // setintoview seems to be bugged on chrome. settimer makes it work
@@ -57,8 +59,16 @@ function About() {
           <p className="md:text-lg sm:text-lg mt-2 font-rubik">With the following features you'll be able to catch up with the major world events for the day in no more than 30 minutes.</p>
         </motion.div>
         <motion.div className="md:basis-10/12 basis-10/12 grid grid-cols-2 md:items-start items-end z-50">
-          {cardData.info.map((card) => (
+          {/* {cardData.info.map((card) => (
             <FeaturesCard title={card.title} body={card.body} bgClass={card.bgClass} animationX={card.animationX} key={uuid()} />
+          ))} */}
+          {cardData.info.map((card) => (
+            <motion.div key={card.title} ref={cardRef} className={" bg-black mdy:p-10 rounded-md lg:py-7 md:py-2 md:px-2 lg:px-4 py-3 px-2 shadow-2xl md:w-4/5 md:h-9/10 h-95/100 w-11/12 text-white " + card.bgClass}
+                initial={{opacity: 0, x: card.animationX}} animate={cardInView ? {opacity: 1, x:0} : {opacity: 0}} transition={{duration: 1}}
+            >
+                <p className=" mdy:text-2xl xl:text-2xl md:text-xl text-sm font-rubik underline underline-offset-4">{card.title}</p>
+                <p className=" mdy:text-lg xl:text-base lg:text-base md:text-base sm:text-sm text-xs font-rubik mt-2">{card.body}</p>
+            </motion.div>
           ))}
           {/* <FeaturesCard title={cardData.info[0].title} body={cardData.info[0].body} bgClass={cardData.info[0].bgClass} animationX={cardData.info[0].animationX} key={uuid()}/>
           <FeaturesCard title={cardData.info[1].title} body={cardData.info[1].body} bgClass={cardData.info[1].bgClass} animationX={cardData.info[1].animationX} key={uuid()}/>
