@@ -1,0 +1,27 @@
+{ "info": [
+    {
+        "title": "Top News ",
+        "body": "Stay informed with our top news feature, which assembles a list of the most popular stories from around the world. Choose from politics, science, entertainment and much more.",
+        "bgClass": "bg-gradient-to-b from-purple-500 to-pink-500",
+        "animationX": -30
+    },
+    {
+        "title": "Choose The Tone",
+        "body": "Filter your news by positivity or negativity. Whether you want to read uplifting news, want to stay informed about world's problems or anything in between, we got you covered.",
+        "bgClass": "bg-gradient-to-b from-cyan-900 to-red-800",
+        "animationX": 30
+    },
+    {
+        
+        "title": "Get The Gist",
+        "body": "No time? No prblem. Read bite size summaries of the most important news stories of the day and save yourself some time. Powered by ChatGPT.",
+        "bgClass": "bg-gradient-to-t from-emerald-400 to-cyan-600",
+        "animationX": -30
+    },
+    {
+        "title": "Compare And Contrast",
+        "body": "Explore different perspectives on the same story with our multi-source news feature. See how different news outlets are covering the same event, so you can gain a complete view",
+        "bgClass": "bg-gradient-to-r from-black to-neutral-500",
+        "animationX": 30
+    }]
+}

@@ -20,6 +20,15 @@ function Home() {
     document.getElementById('signup-section').scrollIntoView({behavior: 'smooth'});
   }
 
+  const handleLearnMore = () => {
+    // remove the underline from 'Home' and place it under 'About'
+    document.getElementById('About-link').classList.add('underline', 'underline-offset-4');
+    document.getElementById('Home-link').classList.remove('underline', 'underline-offset-4');
+
+    // scroll to the Signup section
+    document.getElementById('about-section').scrollIntoView({behavior: 'smooth'});
+  }
+
   const handleScroll = (e) => {
     // setintoview seems to be bugged on chrome. settimer makes it work
     const timer = setTimeout(() => {
@@ -61,11 +70,11 @@ function Home() {
     <div ref={ref} id="home-section"  onWheel={handleScroll}  className="h-full w-full overflow-hidden">
       <div className={"h-full w-full overflow-hidden text-center " + styles.bg_wallpaper}></div>
       <div className={"absolute top-[25%] mx-16 sm:mx-36 md:mx-40 lg:mx-52 xl:w-[44%] xl:mx-[23%] text-center backdrop-blur-[4px] h-fit p-5"}>
-        <p className="text-4xl sm:text-5xl md:text-7xl font-bold font-rubik backdrop-blur-[1px] mb-1">Understand the world around you</p>
+        <p className="text-4xl sm:text-5xl md:text-7xl font-extrabold font-playfair backdrop-blur-[1px] mb-1">Understand the world around you</p>
         <p className={"sm:text-xl md:text-xl font-normal backdrop-blur-[6px] border-black border-[1px] p-3 rounded-sm mb-4 font-playfair"} >Stay up to date with major current events around the world. We provide the latest news in areas such as politics, science, economics and others, customized according to your interests from hundres of different sources</p>
         <div className="flex justify-center space-x-2">
           <GetStartedButton className={buttonBasis} variant="contained" size={buttonSize} onClick={handleGetStarted}>Get started</GetStartedButton>
-          <LearnMoreButton variant="text" className={buttonBasis} size={buttonSize}>Learn more <ArrowForwardIcon fontSize="small" className="ml-1"/></LearnMoreButton>
+          <LearnMoreButton variant="text" className={buttonBasis} size={buttonSize} onClick={handleLearnMore}>Learn more <ArrowForwardIcon fontSize="small" className="ml-1"/></LearnMoreButton>
         </div>
       </div>
     </div>

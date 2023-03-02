@@ -1,0 +1,9 @@
+
+.bg_wallpaper { 
+    background: url(https://res.cloudinary.com/doio2uvsw/image/upload/v1677125940/world_simplified_static_photos/world_new_2-removebg_zuhoo3.png); 
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
