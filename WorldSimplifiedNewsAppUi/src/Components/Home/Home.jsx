@@ -12,7 +12,7 @@ function Home() {
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef)
   const [buttonSize, setSize] = useState('');
-  const [buttonBasis, setBasis] = useState('')
+  const [buttonBasis, setBasis] = useState('');
 
   const handleGetStarted = () => {
     // remove the underline from 'Home' and place it under 'Sign up'
@@ -79,7 +79,7 @@ function Home() {
         <p className={"sm:text-xl md:text-xl font-normal backdrop-blur-[6px] border-black border-[1px] p-3 rounded-sm mb-4 font-playfair"} >Stay up to date with major current events around the world. We provide the latest news in areas such as politics, science, economics and others, customized according to your interests from hundres of different sources</p>
         <div className="flex justify-center space-x-2">
           <GetStartedButton className={buttonBasis} variant="contained" size={buttonSize} onClick={handleGetStarted}>Get started</GetStartedButton>
-          <LearnMoreButton variant="text" className={buttonBasis} size={buttonSize} onClick={handleLearnMore}>Learn more <ArrowForwardIcon fontSize="small" className="ml-1"/></LearnMoreButton>
+          <LearnMoreButton variant="text" className={buttonBasis} size={buttonSize} onClick={handleLearnMore}>Learn more <ArrowForwardIcon fontSize="small" className="sm:ml-1"/></LearnMoreButton>
         </div>
       </motion.div>
     </div>

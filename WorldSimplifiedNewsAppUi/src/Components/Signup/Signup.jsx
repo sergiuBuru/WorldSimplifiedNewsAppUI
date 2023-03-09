@@ -2,12 +2,17 @@ import { useRef } from "react";
 import Typewriter from "../TypeWriter/TypeWriter";
 import headlines from './Headlines.json';
 import uuid from "react-uuid";
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+import SignupForm from "../SignupForm/SignupForm";
 
 
-function Contact() {
+
+function Signup() {
   const ref = useRef(null);
+  // const [h, setHeadlines] = useState([]) 
+
+  // fetch("https://newsapi.org/v2/everything?q=politics%sports%entertainment&apiKey=" + import.meta.env.VITE_newsapi_key)
+  // .then(res => res.json())
+  // .then(data => console.log(data));
 
   const handleScroll = (e) => {
     // setintoview seems to be bugged on chrome. settimer makes it work
@@ -28,17 +33,9 @@ function Contact() {
       {headlines.headlines.map((headline) => (
         <Typewriter headline={headline} key={uuid()}/>
       ))}
-      <div className="flex flex-row top-1/3 h-2/5 w-full absolute justify-center">
-        <div className="gap-2 flex flex-col bg-gradient-to-b from-slate-100 to-slate-300 basis-1/3 rounded-xl shadow-2xl z-50 p-7 pt-10">
-          <p className="text-2xl font-playfair font-bold">Don't let headlines scare you. Sign up</p>
-          <p className="text-md mt-2">Already have an account? <a href="" className="mb-2 text-blue-800">Log in</a></p>
-          <TextField id="outlined-basic" label="Email" variant="outlined" className=""/>
-          <TextField id="outlined-basic" label="Password" variant="outlined"/>
-          <Button variant="contained" style={{backgroundColor: '#2b344f'}}>Sign up</Button>
-        </div>
-      </div>
+      <SignupForm />
     </section>
   );
 }
 
-export default Contact;
+export default Signup;

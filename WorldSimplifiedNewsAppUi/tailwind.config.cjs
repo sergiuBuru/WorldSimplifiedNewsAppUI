@@ -14,6 +14,9 @@ module.exports = {
         '9/10': '90%'
       }, screens: {
         'mdy': { 'raw': '(min-height: 700px)'}
+      },
+      flexBasis: {
+        '1/10': '10%'
       }
     },
     fontFamily: {

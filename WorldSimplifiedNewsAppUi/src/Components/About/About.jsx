@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from './About.module.css';
 import { motion } from 'framer-motion';
 import { useInView } from "framer-motion";
-import FeaturesCard from "../FeaturesCard/FeaturesCard";
-import uuid from "react-uuid";
 import cardData from './CardsInfo.json';
 
 function About() {
@@ -59,37 +57,30 @@ function About() {
           <p className="md:text-lg sm:text-lg mt-2 font-rubik">With the following features you'll be able to catch up with the major world events for the day in no more than 30 minutes.</p>
         </motion.div>
         <motion.div className="md:basis-10/12 basis-10/12 grid grid-cols-2 md:items-start items-end z-50">
-          {/* {cardData.info.map((card) => (
-            <FeaturesCard title={card.title} body={card.body} bgClass={card.bgClass} animationX={card.animationX} key={uuid()} />
-          ))} */}
-            <motion.div key={cardData.info[0].title} ref={cardRef} className={"bg-gradient-to-b from-purple-500 to-pink-500 mdy:p-10 rounded-md lg:py-7 md:py-2 md:px-2 lg:px-4 py-3 px-2 shadow-2xl md:w-4/5 md:h-9/10 h-95/100 w-11/12 text-white "}
+            <motion.div key={cardData.info[0].title} ref={cardRef} className={"bg-gradient-to-b from-purple-500 to-pink-500 rounded-md lg:py-7 md:py-2 md:px-2 lg:px-4 py-3 px-2 shadow-2xl md:w-4/5 md:h-9/10 h-95/100 w-11/12 text-white "}
                 initial={{opacity: 0, x: cardData.info[0].animationX}} animate={cardInView ? {opacity: 1, x:0} : {opacity: 0}} transition={{duration: 1}}
             >
-                <p className=" mdy:text-2xl xl:text-2xl md:text-xl text-sm font-rubik underline underline-offset-4">{cardData.info[0].title}</p>
-                <p className=" mdy:text-lg xl:text-base lg:text-base md:text-base sm:text-sm text-xs font-rubik mt-2">{cardData.info[0].body}</p>
+                <p className=" xl:text-2xl md:text-xl text-sm font-rubik underline underline-offset-4">{cardData.info[0].title}</p>
+                <p className=" xl:text-base lg:text-base md:text-base sm:text-sm text-xs font-rubik mt-2">{cardData.info[0].body}</p>
             </motion.div>
-            <motion.div key={cardData.info[1].title} ref={cardRef} className={"bg-gradient-to-b from-cyan-900 to-red-800 mdy:p-10 rounded-md lg:py-7 md:py-2 md:px-2 lg:px-4 py-3 px-2 shadow-2xl md:w-4/5 md:h-9/10 h-95/100 w-11/12 text-white "}
+            <motion.div key={cardData.info[1].title} ref={cardRef} className={"bg-gradient-to-b from-cyan-900 to-red-800 rounded-md lg:py-7 md:py-2 md:px-2 lg:px-4 py-3 px-2 shadow-2xl md:w-4/5 md:h-9/10 h-95/100 w-11/12 text-white "}
                 initial={{opacity: 0, x: cardData.info[1].animationX}} animate={cardInView ? {opacity: 1, x:0} : {opacity: 0}} transition={{duration: 1}}
             >
-                <p className=" mdy:text-2xl xl:text-2xl md:text-xl text-sm font-rubik underline underline-offset-4">{cardData.info[1].title}</p>
-                <p className=" mdy:text-lg xl:text-base lg:text-base md:text-base sm:text-sm text-xs font-rubik mt-2">{cardData.info[1].body}</p>
+                <p className=" xl:text-2xl md:text-xl text-sm font-rubik underline underline-offset-4">{cardData.info[1].title}</p>
+                <p className=" xl:text-base lg:text-base md:text-base sm:text-sm text-xs font-rubik mt-2">{cardData.info[1].body}</p>
             </motion.div>
-            <motion.div key={cardData.info[2].title} ref={cardRef} className={"bg-gradient-to-t from-emerald-400 to-cyan-600 mdy:p-10 rounded-md lg:py-7 md:py-2 md:px-2 lg:px-4 py-3 px-2 shadow-2xl md:w-4/5 md:h-9/10 h-95/100 w-11/12 text-white "}
+            <motion.div key={cardData.info[2].title} ref={cardRef} className={"bg-gradient-to-t from-emerald-400 to-cyan-600 rounded-md lg:py-7 md:py-2 md:px-2 lg:px-4 py-3 px-2 shadow-2xl md:w-4/5 md:h-9/10 h-95/100 w-11/12 text-white "}
                 initial={{opacity: 0, x: cardData.info[2].animationX}} animate={cardInView ? {opacity: 1, x:0} : {opacity: 0}} transition={{duration: 1}}
             >
-                <p className=" mdy:text-2xl xl:text-2xl md:text-xl text-sm font-rubik underline underline-offset-4">{cardData.info[2].title}</p>
-                <p className=" mdy:text-lg xl:text-base lg:text-base md:text-base sm:text-sm text-xs font-rubik mt-2">{cardData.info[2].body}</p>
+                <p className=" xl:text-2xl md:text-xl text-sm font-rubik underline underline-offset-4">{cardData.info[2].title}</p>
+                <p className=" xl:text-base lg:text-base md:text-base sm:text-sm text-xs font-rubik mt-2">{cardData.info[2].body}</p>
             </motion.div>
-            <motion.div key={cardData.info[3].title} ref={cardRef} className={"bg-gradient-to-b from-black to-neutral-500 mdy:p-10 rounded-md lg:py-7 md:py-2 md:px-2 lg:px-4 py-3 px-2 shadow-2xl md:w-4/5 md:h-9/10 h-95/100 w-11/12 text-white "}
+            <motion.div key={cardData.info[3].title} ref={cardRef} className={"bg-gradient-to-b from-black to-neutral-500 rounded-md lg:py-7 md:py-2 md:px-2 lg:px-4 py-3 px-2 shadow-2xl md:w-4/5 md:h-9/10 h-95/100 w-11/12 text-white "}
                 initial={{opacity: 0, x: cardData.info[3].animationX}} animate={cardInView ? {opacity: 1, x:0} : {opacity: 0}} transition={{duration: 1}}
             >
-                <p className=" mdy:text-2xl xl:text-2xl md:text-xl text-sm font-rubik underline underline-offset-4">{cardData.info[3].title}</p>
-                <p className=" mdy:text-lg xl:text-base lg:text-base md:text-base sm:text-sm text-xs font-rubik mt-2">{cardData.info[3].body}</p>
+                <p className=" xl:text-2xl md:text-xl text-sm font-rubik underline underline-offset-4">{cardData.info[3].title}</p>
+                <p className=" xl:text-base lg:text-base md:text-base sm:text-sm text-xs font-rubik mt-2">{cardData.info[3].body}</p>
             </motion.div>
-          {/* <FeaturesCard title={cardData.info[0].title} body={cardData.info[0].body} bgClass={cardData.info[0].bgClass} animationX={cardData.info[0].animationX} key={uuid()}/>
-          <FeaturesCard title={cardData.info[1].title} body={cardData.info[1].body} bgClass={cardData.info[1].bgClass} animationX={cardData.info[1].animationX} key={uuid()}/>
-          <FeaturesCard title={cardData.info[2].title} body={cardData.info[2].body} bgClass={cardData.info[2].bgClass} animationX={cardData.info[2].animationX} key={uuid()}/>
-          <FeaturesCard title={cardData.info[3].title} body={cardData.info[3].body} bgClass={cardData.info[3].bgClass} animationX={cardData.info[3].animationX} key={uuid()}/> */}
         </motion.div>
       </div>
       <motion.div className={"sm:basis-4/12 basis-3/12 overflow-hidden"} >

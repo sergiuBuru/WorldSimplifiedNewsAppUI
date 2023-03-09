@@ -1,8 +1,11 @@
 import { Link } from "react-scroll";
+import { useState } from "react";
+import LoginForm from "../LoginForm/LoginForm";
 
 
 function Navbar () {
     const sections = ['Home', 'About', 'Sign up'];
+    const [formOpen, setForm] = useState(false);
 
     // underline the selected navbar link and remove the underline of the other non-selected navbar links
     const handleLinkClick = (e) => {
@@ -14,6 +17,16 @@ function Navbar () {
             }
         })
     }
+
+    // trigger the login modal to close
+    const handleOpenForm = () => {
+        setForm(true);
+    }
+
+    // trigger the login modal to open
+    const handleFormClose = () => {
+        setForm(false);
+    } 
 
     return (
       <div className={" z-50 whitespace-nowrap place-items-center backdrop-blur-[3px] flex flex-row justify-end space-x-3 sm:space-x-7 md:space-x-10 w-full mx-0 md:w-10/12 fixed top-5  h-16 bg-transparent sm:text-xl md:mx-16 text-lg font-bold font-playfair"}>
@@ -63,8 +76,9 @@ function Navbar () {
         </div>
         <div> / </div>
         <div>
-            <p className="hover:cursor-pointer mr-2" id="Login-link">Log in</p>
+            <p className="hover:cursor-pointer mr-2" id="Login-link" onClick={handleOpenForm}>Log in</p>
         </div>
+        <LoginForm formOpen={formOpen} handleFormClose={handleFormClose}/>
       </div>
     );
   }
